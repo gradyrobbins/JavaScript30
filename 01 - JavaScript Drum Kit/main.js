@@ -11,3 +11,12 @@ window.addEventListener('keydown', function(e){
     key.classList.add('playing');
     console.log(key)
 })
+
+const keys=document.querySelectorAll('.key');
+console.log(keys)
+
+function removeTransition(e) {
+    console.log(e)
+}
+
+keys.forEach(key => key.addEventListener('transitionend', removeTransition))
